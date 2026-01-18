@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Bubu 🎀</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffb6c1, #ffd1dc, #ffe6f0);
+  overflow-x: hidden;
+  color: #5a2a3a;
+}
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 20px;
+  animation: floatUp linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  color: #d63384;
+  animation: fadeInDown 1.5s ease;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  animation: fadeIn 2.5s ease;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.card {
+  max-width: 700px;
+  margin: 20px auto 60px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 25px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 40px rgba(214, 51, 132, 0.2);
+  text-align: center;
+  animation: zoomIn 1.5s ease;
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.card h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.4rem;
+  color: #e75480;
+  margin-bottom: 15px;
+}
+
+.age {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.highlight {
+  color: #d63384;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 10px 20px rgba(255, 20, 147, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(255, 20, 147, 0.5);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+  </style>
+</head>
+<body>  <header>
+    <h1>Happy Birthday, Bubu 🎀</h1>
+    <p>To the most special girl in my life</p>
+  </header>  <section class="card">
+    <h2>My Sweet Bubu 💕</h2>
+    <div class="age">Turning <span class="highlight">17</span> today ✨</div>
+    <p class="message">
+      Happy Birthday, my love. This is your first birthday with me, and I wanted to make it
+      as special as <span class="highlight">you</span> are. 💖<br /><br />
+      You came into my life like a soft pink sunrise, bringing warmth, smiles, and peace.
+      Every little moment with you feels magical, and every day I feel lucky to call you
+      <span class="highlight">mine</span>.<br /><br />
+      On your 17th birthday, I wish you endless happiness, beautiful dreams, and a life full
+      of love and success. I promise to stand by you, support you, and care for you—always.
+      🌸<br /><br />
+      Stay the same sweet, kind, and beautiful soul you are, my Bubu. 💗
+    </p><a href="#" class="btn" onclick="showLove()">Tap for a Surprise 💝</a>
+
+  </section>  <footer>
+    Made with ❤️ only for Bubu
+  </footer>  <script>
+    // Floating hearts generator
+    const hearts = ['💖', '💕', '💗', '🎀', '🌸'];
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 3 + Math.random() * 4 + 's';
+      heart.style.fontSize = 16 + Math.random() * 24 + 'px';
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+
+    setInterval(createHeart, 500);
+
+    function showLove() {
+      alert('Bubu 💕 You are loved more than words can say. Happy 17th Birthday! 🎂🎀');
+    }
+  </script></body>
+</html>
